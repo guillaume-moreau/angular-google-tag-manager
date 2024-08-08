@@ -10,10 +10,10 @@ export class GoogleTagManagerService {
   private config: GoogleTagManagerConfig | null;
 
   private browserGlobals = {
-    windowRef(): any {
+    windowRef(): Window & typeof globalThis {
       return window;
     },
-    documentRef(): any {
+    documentRef(): Document {
       return document;
     },
   };
@@ -64,6 +64,7 @@ export class GoogleTagManagerService {
     return true;
   }
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   public getDataLayer(): any[] {
     this.checkForId();
     const window = this.browserGlobals.windowRef();
