@@ -28,6 +28,16 @@
             "tsConfig": "projects/angular-google-tag-manager/tsconfig.spec.json",
             "karmaConfig": "projects/angular-google-tag-manager/karma.conf.js"
           }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "projects/angular-google-tag-manager/**/*.ts",
+              "projects/angular-google-tag-manager/**/*.html"
+            ],
+            "eslintConfig": "projects/angular-google-tag-manager/eslint.config.js"
+          }
         }
       }
     },
@@ -101,14 +111,13 @@
           }
         },
         "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
+          "builder": "@angular-eslint/builder:lint",
           "options": {
-            "tsConfig": [
-              "projects/demo-application/tsconfig.app.json"
+            "lintFilePatterns": [
+              "projects/demo-application/**/*.ts",
+              "projects/demo-application/**/*.html"
             ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "eslintConfig": "projects/demo-application/eslint.config.js"
           }
         }
       }

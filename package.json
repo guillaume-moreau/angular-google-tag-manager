@@ -31,7 +31,8 @@
     "build:lib:prod": "ng build angular-google-tag-manager --configuration=production",
     "test:lib": "ng test angular-google-tag-manager",
     "lint:lib": "ng lint angular-google-tag-manager",
-    "version": "ng version"
+    "version": "ng version",
+    "lint": "ng lint"
   },
   "private": true,
   "dependencies": {
@@ -54,7 +55,8 @@
     "@types/jasmine": "~4.3.1",
     "@types/jasminewd2": "~2.0.10",
     "@types/node": "~18.15.3",
-    "codelyzer": "~6.0.2",
+    "angular-eslint": "18.2.0",
+    "eslint": "^9.8.0",
     "jasmine-core": "~5.1.1",
     "jasmine-spec-reporter": "~7.0.0",
     "karma": "~6.4.2",
@@ -65,6 +67,7 @@
     "ng-packagr": "~18.1.0",
     "protractor": "~7.0.0",
     "ts-node": "~10.9.1",
-    "typescript": "~5.5.4"
+    "typescript": "~5.5.4",
+    "typescript-eslint": "8.0.0"
   }
 }
